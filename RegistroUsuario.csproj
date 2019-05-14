@@ -64,6 +64,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Registro\rUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registro\rUsuario.Designer.cs">
+      <DependentUpon>rUsuario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -75,7 +81,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Registro\rUsuario.resx">
+      <DependentUpon>rUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -92,10 +102,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="UI\Consultas\" />
-    <Folder Include="UI\Registro\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DAL\Scripts\UsuariosDb.sql" />
+    <None Include="Resources\search-13-16.png" />
+    <None Include="Resources\save-16.png" />
+    <None Include="Resources\file-16.png" />
+    <None Include="Resources\delete-16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

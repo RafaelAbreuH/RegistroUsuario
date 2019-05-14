@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RegistroUsuario.UI.Registro;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,18 @@ using System.Windows.Forms;
 
 namespace RegistroUsuario
 {
-    public partial class MainForm : Form
+    public partial class Programa : Form
     {
-        public MainForm()
+        public Programa()
         {
             InitializeComponent();
+        }
+
+        private void UsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rUsuario ver = new rUsuario();
+            ver.MdiParent = this;
+            ver.Show();
         }
     }
 }
