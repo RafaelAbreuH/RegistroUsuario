@@ -43,15 +43,14 @@
             this.ClavemaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.ConfirmarmaskedTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Eliminarbutton = new System.Windows.Forms.Button();
             this.MyerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.NivelUsuariocomboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -171,21 +170,14 @@
             this.ConfirmarmaskedTextBox.Size = new System.Drawing.Size(127, 20);
             this.ConfirmarmaskedTextBox.TabIndex = 13;
             // 
-            // dateTimePicker1
+            // FechadateTimePicker
             // 
-            this.dateTimePicker1.CustomFormat = "dd/mm/yyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(109, 274);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(127, 20);
-            this.dateTimePicker1.TabIndex = 14;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(109, 238);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(38, 20);
-            this.numericUpDown1.TabIndex = 15;
+            this.FechadateTimePicker.CustomFormat = "dd/mm/yyy";
+            this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.FechadateTimePicker.Location = new System.Drawing.Point(109, 274);
+            this.FechadateTimePicker.Name = "FechadateTimePicker";
+            this.FechadateTimePicker.Size = new System.Drawing.Size(127, 20);
+            this.FechadateTimePicker.TabIndex = 14;
             // 
             // Buscarbutton
             // 
@@ -223,34 +215,49 @@
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
-            // button1
+            // Eliminarbutton
             // 
-            this.button1.Image = global::RegistroUsuario.Properties.Resources.delete_16;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(176, 311);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 37);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Eliminar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Image = global::RegistroUsuario.Properties.Resources.delete_16;
+            this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Eliminarbutton.Location = new System.Drawing.Point(176, 311);
+            this.Eliminarbutton.Name = "Eliminarbutton";
+            this.Eliminarbutton.Size = new System.Drawing.Size(75, 37);
+            this.Eliminarbutton.TabIndex = 19;
+            this.Eliminarbutton.Text = "Eliminar";
+            this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Eliminarbutton.UseVisualStyleBackColor = true;
             // 
             // MyerrorProvider
             // 
             this.MyerrorProvider.ContainerControl = this;
+            // 
+            // NivelUsuariocomboBox
+            // 
+            this.NivelUsuariocomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.NivelUsuariocomboBox.FormattingEnabled = true;
+            this.NivelUsuariocomboBox.Items.AddRange(new object[] {
+            "Usuario basico",
+            "Secretaria",
+            "Administrador",
+            "CEO"});
+            this.NivelUsuariocomboBox.Location = new System.Drawing.Point(109, 232);
+            this.NivelUsuariocomboBox.Name = "NivelUsuariocomboBox";
+            this.NivelUsuariocomboBox.Size = new System.Drawing.Size(127, 21);
+            this.NivelUsuariocomboBox.TabIndex = 20;
             // 
             // rUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(263, 360);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.NivelUsuariocomboBox);
+            this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);
             this.Controls.Add(this.Buscarbutton);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.FechadateTimePicker);
             this.Controls.Add(this.ConfirmarmaskedTextBox);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.ClavemaskedTextBox);
@@ -268,7 +275,6 @@
             this.Name = "rUsuario";
             this.Text = "rUsuario";
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -291,12 +297,12 @@
         private System.Windows.Forms.MaskedTextBox ClavemaskedTextBox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.MaskedTextBox ConfirmarmaskedTextBox;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.DateTimePicker FechadateTimePicker;
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.Button Guardarbutton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.ErrorProvider MyerrorProvider;
+        private System.Windows.Forms.ComboBox NivelUsuariocomboBox;
     }
 }
