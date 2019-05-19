@@ -7,7 +7,7 @@ create table Usuario
 	UsuarioId int primary key identity,
 	Nombre varchar(30),
 	email varchar(max),
-	NivelUsuario int,
+	NivelUsuario varchar(30),
 	Usuario varchar(30),
 	Clave varchar(30),
 	fechaIngreso Datetime

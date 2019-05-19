@@ -1,4 +1,5 @@
 ﻿using RegistroUsuario.UI.Registro;
+using RegistroUsuario.UI.Consultas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,13 @@ namespace RegistroUsuario
         private void UsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             rUsuario ver = new rUsuario();
+            ver.MdiParent = this;
+            ver.Show();
+        }
+
+        private void UsuarioToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            cUsuario ver = new cUsuario();
             ver.MdiParent = this;
             ver.Show();
         }
